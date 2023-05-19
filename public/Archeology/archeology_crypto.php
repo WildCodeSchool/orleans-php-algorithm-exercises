@@ -155,7 +155,7 @@ $stage = $_GET['stage'] ?? '1';
     <script>
         function refreshTablet() {
             const params = new URLSearchParams(window.location.search)
-            const stage = params.get('stage')
+            const stage = params.get('stage') ?? '1'
             const muralText = document.querySelector('.grainy_wall').textContent
             fetch("http://localhost:8000/Archeology/bridges/muralBridge.php", {
                     method: "POST",
